@@ -1,3 +1,5 @@
+import Table from "./table";
+
 export default function Dashboard(){
     return (
         <>
@@ -119,7 +121,7 @@ export default function Dashboard(){
         </svg>
       </a>
       <a
-        className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 mt-auto rounded hover:bg-gray-300"
+        className="flex items-center justify-center flex-shrink-0 w-10 h-10  rounded hover:bg-gray-300"
         href="#"
       >
         <svg
@@ -141,7 +143,7 @@ export default function Dashboard(){
     <div className="flex flex-col w-56 border-r border-gray-300">
       <button className="relative text-sm focus:outline-none group">
         <div className="flex items-center justify-between w-full h-16 px-4 border-b border-gray-300 hover:bg-gray-300">
-          <span className="font-medium">Dropdown</span>
+          <span className="font-medium">Mas opciones</span>
           <svg
             className="w-4 h-4"
             xmlns="http://www.w3.org/2000/svg"
@@ -157,13 +159,13 @@ export default function Dashboard(){
         </div>
         <div className="absolute z-10 flex-col items-start hidden w-full pb-1 bg-white shadow-lg group-focus:flex">
           <a className="w-full px-4 py-2 text-left hover:bg-gray-300" href="#">
-            Menu Item 1
+            Menu 
           </a>
           <a className="w-full px-4 py-2 text-left hover:bg-gray-300" href="#">
-            Menu Item 1
+            Menu 
           </a>
           <a className="w-full px-4 py-2 text-left hover:bg-gray-300" href="#">
-            Menu Item 1
+            Menu 
           </a>
         </div>
       </button>
@@ -172,13 +174,13 @@ export default function Dashboard(){
           className="flex items-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded hover:bg-gray-300"
           href="#"
         >
-          <span className="leading-none">Item 1</span>
+          <span className="leading-none">cosa 1</span>
         </a>
         <a
           className="flex items-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded hover:bg-gray-300"
           href="#"
         >
-          <span className="leading-none">Item 2</span>
+          <span className="leading-none">cosa</span>
         </a>
         <a
           className="flex items-center flex-shrink-0 h-10 px-2 text-sm font-medium rounded hover:bg-gray-300"
@@ -222,18 +224,19 @@ export default function Dashboard(){
               d="M12 6v6m0 0v6m0-6h6m-6 0H6"
             />
           </svg>
-          <span className="ml-2 leading-none">New Item</span>
+          <span className="ml-2 leading-none">Opcion</span>
         </a>
       </div>
+      
     </div>
     <div className="flex flex-col flex-grow">
       <div className="flex items-center flex-shrink-0 h-16 px-8 border-b border-gray-300">
-        <h1 className="text-lg font-medium">Page Title</h1>
+        <h1 className="text-lg font-medium">Dashboard</h1>
         <button className="flex items-center justify-center h-10 px-4 ml-auto text-sm font-medium rounded hover:bg-gray-300">
-          Action 1
+          Elminiar tabla
         </button>
         <button className="flex items-center justify-center h-10 px-4 ml-2 text-sm font-medium bg-gray-200 rounded hover:bg-gray-300">
-          Action 2
+          Borrar cambios
         </button>
         <button className="relative ml-2 text-sm focus:outline-none group">
           <div className="flex items-center justify-between w-10 h-10 rounded hover:bg-gray-300">
@@ -252,6 +255,7 @@ export default function Dashboard(){
               />
             </svg>
           </div>
+          
           <div className="absolute right-0 flex-col items-start hidden w-40 pb-1 bg-white border border-gray-300 shadow-lg group-focus:flex">
             <a
               className="w-full px-4 py-2 text-left hover:bg-gray-300"
@@ -276,7 +280,9 @@ export default function Dashboard(){
       </div>
       <div className="flex-grow p-6 overflow-auto bg-gray-200">
         <div className="grid grid-cols-3 gap-6">
-          
+        <div className=" ml-[12rem]">
+        <Table/>
+      </div>
         </div>
       </div>
     </div>
