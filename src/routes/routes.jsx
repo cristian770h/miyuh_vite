@@ -2,9 +2,9 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import Navbar from "../components/navbar";
-import Login from "../pages/login";
 import Dashboard from "../pages/dashboard";
 import Adduser from "../pages/addUser";
+import Login from "../pages/login";
 
 
 export const routes = createBrowserRouter([
