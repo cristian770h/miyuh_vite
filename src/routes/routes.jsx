@@ -5,6 +5,7 @@ import Navbar from "../components/navbar";
 import Dashboard from "../pages/dashboard";
 import Adduser from "../pages/addUser";
 import Login from "../pages/login";
+import Artist from "../pages/artist";
 
 
 export const routes = createBrowserRouter([
@@ -19,6 +20,11 @@ export const routes = createBrowserRouter([
     {
         path:"/dasboard",
         element:<Dashboard/>
+
+    },  
+    {
+        path:"artist",
+        element:<Artist/>
     },  
     {
         path:"*",

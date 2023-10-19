@@ -71,3 +71,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.portada{
+  background-image: url('..\src\assets\img\jhaycoshare_1200x.jpg');
+    background-size: cover;
+    background-position: center;
+}
