@@ -77,3 +77,16 @@ button:focus-visible {
     background-size: cover;
     background-position: center;
 }
+
+.jhayco{
+  background-image: url('..\src\assets\img\jhayco_more.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.timelezz{
+  background-image: url('..\src\assets\img\timelezz.jpg');
+    background-size: cover;
+    background-position: center;
+}
