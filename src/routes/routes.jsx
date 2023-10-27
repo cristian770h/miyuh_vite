@@ -10,6 +10,8 @@ import Albums from "../pages/albums";
 import Moreinfo from "../pages/more_info";
 import CardAlbum from "../components/card_albums";
 import AlbumDetails from "../pages/albumdetails";
+import Example from "../pages/login2";
+import UpdUser from "../components/UpdUser";
 
 export const routes = createBrowserRouter([
     {
@@ -48,5 +50,13 @@ export const routes = createBrowserRouter([
     {
         path:"*",
         element:<h1>Error</h1>
-    }
+    },
+    {
+        path:"/login2",
+        element:<Example/>
+    },
+    {
+        path:"editar",
+        element:<UpdUser/>
+    }, 
 ])

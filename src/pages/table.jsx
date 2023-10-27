@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -72,7 +72,7 @@ export default function IndexDash (){
                         {users.Password}
                       </td>
                       <td class="px-6 py-4">
-                        <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                      <button onClick={()=> navigate(`/editar/${users.PkUser}`)} className=" btn btn-warning mr-auto"> Editar</button>
                       </td>
                       <td class="px-6 py-4">
                         <button onClick={()=> HandeDelte(users.id)} className="font-medium text-blue-600  hover:underline">Eliminar</button>
