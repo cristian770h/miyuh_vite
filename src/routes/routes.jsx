@@ -12,6 +12,7 @@ import CardAlbum from "../components/card_albums";
 import AlbumDetails from "../pages/albumdetails";
 import Example from "../pages/login2";
 import UpdUser from "../components/UpdUser";
+import Clima from "../pages/clima";
 
 export const routes = createBrowserRouter([
     {
@@ -56,7 +57,12 @@ export const routes = createBrowserRouter([
         element:<Example/>
     },
     {
-        path:"editar",
+        path:"/update",
         element:<UpdUser/>
-    }, 
+    },
+    {
+        path:"/clima",
+        element:<Clima/>
+    },
+    
 ])

@@ -1,3 +1,4 @@
+import AddUser from "../components/agregarusuario";
 import Table from "./table";
 
 export default function Dashboard() {
@@ -279,8 +280,11 @@ export default function Dashboard() {
             </button>
           </div>
           <div className="flex-grow p-6 overflow-auto bg-gray-200">
-            <div className="grid grid-cols-3 gap-6">
-              <div className=" ml-[12rem]">
+            <div className=" gap-6 ">
+              <div>
+                <AddUser/>
+              </div>
+              <div className=" ]">
                 <Table />
               </div>
             </div>
