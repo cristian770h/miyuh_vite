@@ -30,6 +30,8 @@ export default function UpdUser() {
     console.log(id)
 
     const [User, SetUser] = useState({
+        Nombre: "",
+        Apellido: "",
         UserName: "",
         Password: ""
     })
@@ -40,6 +42,8 @@ export default function UpdUser() {
             const response = await axios.get(`http://localhost:3000/users/${id}`)
             console.log(response);
             SetUser({
+                Nombre: response.data.Nombre,
+                Apellido: response.data.Apellido,
                 UserName: response.data.UserName,
                 Password: response.data.Password
             })
@@ -50,19 +54,17 @@ export default function UpdUser() {
     return (
         <>
             <Formik
-                initialValues={users} //Una vez buscado los datos lo va mapear de forma automatica
+                initialValues={User} //Una vez buscado los datos lo va mapear de forma automatica
                 enableReinitialize={true}
                 onSubmit={async (values, actions) => {
                     console.log(values)
 
-                    var res = await axios.put(`http://localhost:3000/users/${id}`, values)
+                    var res = await axios.patch(`http://localhost:3000/users/${id}`, values)
                     actions.resetForm()
                     // alert('Datos actualizados correctamente')
                     if (res.status == 200) {
                         //Redirecciomar 
                         window.location = '/dasboard';
-
-
                     }
                     else {
                         alert("Succedio un error")
@@ -72,7 +74,17 @@ export default function UpdUser() {
                 {({ handleChange, handleSubmit, values }) => (
                     <div className='container mx-15 w-50  p-20'>
                         <h2 className="font-black text-3lx text-center">Editar usuario</h2>
-                        <Form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit}>
+                            <div class="mb-6">
+                                <label className="block mb-2 text-sm font-medium text-gray-900 ">Nombre</label>
+                                <input type="text" onChange={handleChange}
+                                    value={values.Nombre} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " id='Nombre' />
+                            </div>
+                            <div class="mb-6">
+                                <label for="passwordName" class="block mb-2 text-sm font-medium text-gray-900">Apellido</label>
+                                <input type="text" onChange={handleChange}
+                                    value={values.Apellido} name="Apellido" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " id='Apellido'  />
+                            </div>
                             <div class="mb-6">
                                 <label for="email" className="block mb-2 text-sm font-medium text-gray-900 ">Nombre de usuario</label>
                                 <input type="text" onChange={handleChange}
@@ -81,10 +93,10 @@ export default function UpdUser() {
                             <div class="mb-6">
                                 <label for="email" className="block mb-2 text-sm font-medium text-gray-900 ">Contraseña</label>
                                 <input type="password" onChange={handleChange}
-                                    value={values.Password} name="Password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required />
+                                    value={values.Password} name="Password" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  " id='Password' required />
                             </div>
                             <button type='onSubmit' className='btn btn-success'>Guardar</button>
-                        </Form>
+                        </form>
                     </div>
                 )}
             </Formik>

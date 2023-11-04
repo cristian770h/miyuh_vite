@@ -75,22 +75,6 @@ export default function AlbumDetails() {
                                             <td>12</td>
                                             <td>Esta deja</td>
                                         </tr>
-                                        <tr>
-                                            <td>12</td>
-                                            <td>Esta deja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>12</td>
-                                            <td>Esta deja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>12</td>
-                                            <td>Esta deja</td>
-                                        </tr>
-                                        <tr>
-                                            <td>12</td>
-                                            <td>Esta deja</td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

@@ -40,9 +40,7 @@ function AddUser() {
                 // VER LOS VALORES QUE AGREGA EL USUARIO
                 onSubmit={async (values, actions) => {
                     console.log(values)
-
                     var res = await axios.post('http://localhost:3000/users', values)
-
                     actions.resetForm()
                     alert('Datos agregados correctamente')
                     window.location = '/dasboard';

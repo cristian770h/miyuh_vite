@@ -13,6 +13,7 @@ import AlbumDetails from "../pages/albumdetails";
 import Example from "../pages/login2";
 import UpdUser from "../components/UpdUser";
 import Clima from "../pages/clima";
+import CondicionesAtmosfericas from "../pages/clima";
 
 export const routes = createBrowserRouter([
     {
@@ -57,12 +58,12 @@ export const routes = createBrowserRouter([
         element:<Example/>
     },
     {
-        path:"/update",
+        path:"/update/:id",
         element:<UpdUser/>
     },
     {
         path:"/clima",
-        element:<Clima/>
+        element:<CondicionesAtmosfericas/>
     },
     
 ])
