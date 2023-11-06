@@ -14,6 +14,8 @@ import Example from "../pages/login2";
 import UpdUser from "../components/UpdUser";
 import Clima from "../pages/clima";
 import CondicionesAtmosfericas from "../pages/clima";
+import BuscarImg from "../components/buscarimg";
+import YoutubeAPi from "../components/ytapi";
 
 export const routes = createBrowserRouter([
     {
@@ -64,6 +66,14 @@ export const routes = createBrowserRouter([
     {
         path:"/clima",
         element:<CondicionesAtmosfericas/>
+    },
+    {
+        path:"/img",
+        element:<BuscarImg/>
+    },
+    {
+        path:"/YT",
+        element:<YoutubeAPi/>
     },
     
 ])
