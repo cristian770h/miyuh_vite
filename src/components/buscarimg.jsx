@@ -39,9 +39,9 @@ export default function BuscarImg() {
                     </button>
                 </div>
             </div>
-            {/* Asegurarse de que la galería de imágenes también esté centrada y sea responsiva */}
+            
             <div className="flex justify-center mt-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"> {/* Columnas responsivas según el tamaño de la pantalla */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                     {resultados.map((elemento, indice) => (
                         <img className="w-full h-auto object-cover m-2" key={indice} src={elemento.urls.regular} alt={elemento.alt_description} />
                     ))}

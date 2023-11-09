@@ -16,7 +16,6 @@ import Clima from "../pages/clima";
 import CondicionesAtmosfericas from "../pages/clima";
 import BuscarImg from "../components/buscarimg";
 import YoutubeAPi from "../components/ytapi";
-
 export const routes = createBrowserRouter([
     {
         path:"/",
@@ -72,8 +71,8 @@ export const routes = createBrowserRouter([
         element:<BuscarImg/>
     },
     {
-        path:"/YT",
+        path:"/yt",
         element:<YoutubeAPi/>
-    },
+    }
     
 ])
