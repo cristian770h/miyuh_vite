@@ -90,3 +90,9 @@ button:focus-visible {
     background-size: cover;
     background-position: center;
 }
+.bg-fondo{
+  background: url("");
+  background-repeat: no-repeat ;
+  background-position: center;
+  background-size: cover;
+}
