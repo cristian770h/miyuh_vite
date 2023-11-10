@@ -1,59 +1,46 @@
 import { Link } from "react-router-dom"
 
 export default function Login() {
-    return(
-    <>
-        <div className=" container text-green-500 m-0 p-0 border-b-0 font-serif bg-[#c9d6ff]">
-            <div className=" form-container">
-                <form action="" method="get">
-                    <h1>Crear cuenta</h1>
-                    <div> 
-                        <Link to="" ></Link>
-                    </div>
-                    <span>
-                        O utilize su correo electronico
-                    </span>
-                    <input type="text" placeholder="Nombre"></input>
-                    <input type="email" placeholder="Correo"></input>
-                    <input type="password" placeholder="Contraseña"></input>
-                    <button>Registrarse</button>
-                </form>
+    return (
+        <div className="flex flex-col h-[36rem] w-[30rem] items-center justify-center translate-x-[28rem] px-50 border-4 border-blue-400 rounded-xl" >
+          <div className="text-center">
+            <h1 className="text-4xl font-semibold text-black">Bienvenido</h1>
+            <p className="text-xl">Inicia sesión para continuar</p>
+            <span>
+              <Link to={"/"}>Regresar al inicio</Link>
+            </span>
+          </div>
+    
+          <form className="flex flex-col gap-2 mt-8">
+            <div className="flex flex-col">
+              <label className="text-black text-center mb-2">Correo electrónico</label>
+              <div className="flex flex-row items-center justify-center gap-2 border-2 px-4 rounded-md">
+                <box-icon name="envelope" color="gray"></box-icon>
+                <input
+                  className="border-none outline-none rounded-md"
+                  type="email"
+                  placeholder="Correo electrónico"
+                />
+              </div>
             </div>
-            <div className=" form-container">
-                <form action="" method="get">
-                    <h1>Ingresar a su cuenta</h1>
-                    <div> 
-                        <Link to="" ></Link>
-                    </div>
-                    <span>
-                        O utilize su correo electronico
-                    </span>
-                    <input type="email" placeholder="Correo"></input>
-                    <input type="password" placeholder="Contraseña"></input>
-                    <Link to="" >Olvido su contraseña</Link>
-                    <button>Ingresar cuenta</button>
-                </form>
+            <div className="flex flex-col">
+              <label className="text-black text-center mb-2">Contraseña</label>
+              <div className="flex flex-row items-center justify-center gap-2 border-2 px-4 rounded-md">
+                <box-icon name="lock" color="gray"></box-icon>
+                <input
+                  className="border-none outline-none rounded-md "
+                  type="password"
+                  placeholder="Contraseña"
+                />
+              </div>
             </div>
-            <div className="toggle-container">
-                <div className=" toggle">
-                    <div className="toggle-panel toggle-left">
-                        <h1>Bienvenido de nuevo</h1>
-                        <p>
-                            Enter your personal details to use all of site features
-                        </p>
-                        <button className="hidden" id="login">Ingresar</button>
-                    </div>
-                    <div className="toggle-panel toggle-right">
-                        <h1>Registrese aquí</h1>
-                        <p>
-                            Enter your personal details to use all of site features
-                        </p>
-                        <button className="hidden" id="register">Registrarse</button>
-                    </div>
-                    
-                </div>
-            </div>
+            <button className="bg-black text-white rounded-md py-2 mt-2">
+              Iniciar sesión
+            </button>
+          </form>
+          <p className="mt-4 font-bold">¿No tienes cuenta? <Link to={"/register"} className="text-blue-700">Registrate</Link></p>
+          <div className="absolute w-full h-4 bottom-0 left-0 bg-gradient-to-t from-blue-400 to-transparent rounded-xl"></div>
         </div>
-    </>
-    )
-}
+      );
+    }
+    

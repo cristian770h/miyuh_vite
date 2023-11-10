@@ -18,69 +18,81 @@ import BuscarImg from "../components/buscarimg";
 import YoutubeAPi from "../components/ytapi";
 import Home from "../pages/Home";
 import CardNavegacion from "../components/cardNavegacion";
+import Register from "../pages/registrer";
+import TablaUsers from "../pages/tablaUsers";
+
 export const routes = createBrowserRouter([
     {
-    path: "/",
-    element: <Navbar />,
-    children: [
-      {
         path: "/",
-        element: <Home />,
-      },
-    ],
-  },     
+        element: <Navbar />,
+        children: [
+            {
+                path: "/",
+                element: <Home />,
+            },
+        ],
+    },
     {
-        path:"/login",
-        element:<Login/>
-    }, 
+        path: "/login",
+        element: <Login />
+    },
     {
-        path:"/dasboard",
-        element:<Dashboard/>
+        path: "/dasboard",
+        element: <Dashboard />
 
-    },  
-    {
-        path:"artist",
-        element:<Artist/>
     },
     {
-        path:"albums",
-        element:<Albums/>
+        path: "artist",
+        element: <Artist />
+    },
+
+    {
+        path: "/tablaUsers",
+        element: <TablaUsers />,
     },
     {
-        path:"mas_informacion",
-        element:<Moreinfo/>
-    }, 
-    {
-        path:"cardalbum",
-        element:<CardAlbum/>
+        path: "albums",
+        element: <Albums />
     },
     {
-        path:"albumdetails",
-        element:<AlbumDetails/>
-    },  
-    {
-        path:"*",
-        element:<h1>Error</h1>
+        path: "mas_informacion",
+        element: <Moreinfo />
     },
     {
-        path:"/login2",
-        element:<Example/>
+        path: "cardalbum",
+        element: <CardAlbum />
     },
     {
-        path:"/update/:id",
-        element:<UpdUser/>
+        path: "albumdetails",
+        element: <AlbumDetails />
     },
     {
-        path:"/clima",
-        element:<CondicionesAtmosfericas/>
+        path: "*",
+        element: <h1>Error</h1>
     },
     {
-        path:"/img",
-        element:<BuscarImg/>
+        path: "/login2",
+        element: <Example />
     },
     {
-        path:"/yt",
-        element:<YoutubeAPi/>
+        path: "/update/:id",
+        element: <UpdUser />
+    },
+    {
+        path: "/clima",
+        element: <CondicionesAtmosfericas />
+    },
+    {
+        path: "/img",
+        element: <BuscarImg />
+    },
+    {
+        path: "/yt",
+        element: <YoutubeAPi />
+    },
+
+    {
+        path: "/register",
+        element: <Register />
     }
-    
 ])
