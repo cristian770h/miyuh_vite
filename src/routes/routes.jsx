@@ -16,11 +16,19 @@ import Clima from "../pages/clima";
 import CondicionesAtmosfericas from "../pages/clima";
 import BuscarImg from "../components/buscarimg";
 import YoutubeAPi from "../components/ytapi";
+import Home from "../pages/Home";
+import CardNavegacion from "../components/cardNavegacion";
 export const routes = createBrowserRouter([
     {
-        path:"/",
-        element:<Navbar/>
-    },     
+    path: "/",
+    element: <Navbar />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
+  },     
     {
         path:"/login",
         element:<Login/>
