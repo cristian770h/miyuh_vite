@@ -18,6 +18,9 @@ import BuscarImg from "../components/buscarimg";
 import YoutubeAPi from "../components/ytapi";
 import Home from "../pages/Home";
 import CardNavegacion from "../components/cardNavegacion";
+import SongDetails from "../pages/SongDetails";
+import TranslateComponent from "../components/translate";
+import MasArtistas from "../components/MoreArtist";
 export const routes = createBrowserRouter([
     {
     path: "/",
@@ -81,6 +84,14 @@ export const routes = createBrowserRouter([
     {
         path:"/yt",
         element:<YoutubeAPi/>
+    },
+    {
+        path:"/letra",
+        element:<SongDetails/>
+    },
+    {
+        path:"/Related",
+        element:<MasArtistas/>
     }
     
 ])

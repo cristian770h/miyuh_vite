@@ -3,17 +3,27 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Albums() {
-    const [Artist, setArtist] = useState([]);
-    useEffect(() => {
-        fetchArtist();
-    }, []);
-    const fetchArtist= async () => {
-        const response = await axios.get('https://api.musixmatch.com/ws/1.1/artist.albums.get?artist_id=1039&s_release_date=desc&g_album_name=1&apikey=ce0f47cb13b8b37026ffe0daea62678c');
-                    setArtist(response.data);
-                    console.log(response.data);
-                    console.log('Datos de la api')
-                    console.log(response)
-    }
+    const [albums, setAlbums] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const apiUrl = 'https://api.spotify.com/v1/albums?ids=6nVcHLIgY5pE2YCl8ubca1%3AwzfcsXeljU7JkG5GQn8Y%2a2LGFK2TeN4fAKm1ZOc1I'
+    const config = {
+      headers: {
+        Authorization: `Bearer  BQAZgPAlcpQaTk4lOj5JER4RhO2l2VXvWghmnfYPmmb559RlwJYW1eQk6m4cYPfViHxPw5CkckfICdq5WhVKSEQgMxZkN7gApRr9rTVbG4Bw0QUe9b4`
+      },
+    };
+
+    axios.get(apiUrl, config)
+    .then((response) => {
+      console.log('Respuesta exitosa:', response.data);
+      // Establecer el álbum como un arreglo que contiene un solo elemento
+      setAlbums([response.data]);
+    })
+    .catch((error) => {
+      // ... manejo de errores ...
+    });
+}, []);
     return (
         <>
             <div className="flex mt-[3rem] text-black">

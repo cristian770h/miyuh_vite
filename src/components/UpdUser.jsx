@@ -3,24 +3,6 @@ import axios from 'axios';
 // import NavDash from './NavDash'
 import { Formik } from 'formik';
 import { useParams, redirect } from 'react-router-dom'; //Obtiene el Id de la ruta
-
-/**
- * 
- * <Form.Group className="mb-3">
-                                <Form.Label>Usuario</Form.Label>
-                                <Form.Control type="text" name="UserName"
-                                    onChange={handleChange}
-                                    value={values.UserName} />
-                            </Form.Group>
-                            <Form.Group className="mb-3" >
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control type="text" name="Password"
-                                    onChange={handleChange}
-                                    value={values.Password} />
-                            </Form.Group>
- */
-
-
 export default function UpdUser() {
 
     const params = useParams()
