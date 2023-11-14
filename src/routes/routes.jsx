@@ -3,7 +3,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Dashboard from "../pages/dashboard";
-import Adduser from "../pages/addUser";
 import Login from "../pages/login";
 import Artist from "../pages/artist";
 import Albums from "../pages/albums";
@@ -12,14 +11,11 @@ import CardAlbum from "../components/card_albums";
 import AlbumDetails from "../pages/albumdetails";
 import Example from "../pages/login2";
 import UpdUser from "../components/UpdUser";
-import Clima from "../pages/clima";
 import CondicionesAtmosfericas from "../pages/clima";
 import BuscarImg from "../components/buscarimg";
 import YoutubeAPi from "../components/ytapi";
 import Home from "../pages/Home";
-import CardNavegacion from "../components/cardNavegacion";
 import SongDetails from "../pages/SongDetails";
-import TranslateComponent from "../components/translate";
 import MasArtistas from "../components/MoreArtist";
 export const routes = createBrowserRouter([
     {
