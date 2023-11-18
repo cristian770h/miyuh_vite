@@ -9,7 +9,7 @@ const CardAlbum = () => {
     const apiUrl = 'https://api.spotify.com/v1/albums/3AwzfcsXeljU7JkG5GQn8Y';
     const config = {
       headers: {
-        Authorization: `Bearer  BQAZgPAlcpQaTk4lOj5JER4RhO2l2VXvWghmnfYPmmb559RlwJYW1eQk6m4cYPfViHxPw5CkckfICdq5WhVKSEQgMxZkN7gApRr9rTVbG4Bw0QUe9b4`
+        Authorization: `Bearer  BQBxFNsfanUJDeB6HushOUAe_Soc1Ovo_kPnCy2qOg9kcXgmA86Tz6SE7Xcb_ZplUTY_hsOTk_S7BaEcBOBvM8m5h7e0Rk_A5har96EZATbogrNm8vE`
       },
     };
 

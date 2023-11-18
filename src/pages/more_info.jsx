@@ -1,4 +1,4 @@
-import Biography_artist from "../components/Biography_Artist";
+
 import RedesSociales from "../components/Redes_sociales";
 import ImgMasInfo from "../components/img_moreinfo";
 

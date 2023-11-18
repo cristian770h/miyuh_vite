@@ -1,6 +1,4 @@
-import SongArtist from "../components/Canciones_Artist";
 import TwitterArtist from "../components/Twitter_api";
-import PortadaArtist from "../components/Portada_Artist";
 import MasArtistas from "../components/MoreArtist";
 import Insta from "../components/InstaApi";
 
@@ -8,11 +6,10 @@ export default function Artist() {
     return (
         <>
             <div>
-                <PortadaArtist />
             </div>
             <div className="flex mt-[3rem] text-black">
                 <div>
-                    <SongArtist />
+
                 </div>
                 <div className="">
                     <TwitterArtist />

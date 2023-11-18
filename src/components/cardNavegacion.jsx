@@ -13,7 +13,6 @@ export default function CardNavegacion({ texto, texto2, imagen, direccion}) {
                 <p class="w-full flex-none text-sm font-medium text-slate-700 mt-16">
                     {texto2}
                 </p>
-                {/* el siguiente div de abajo es solo una linea pero se ve muy cool*/}
                 <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-blue-400"></div>
                 <div class="flex mb-5 text-sm font-medium">
                     <button class="h-10 px-6 font-semibold rounded-xl bg-white text-slate-900" type="submit">
