@@ -2,12 +2,13 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import Navbar from "../components/navbar";
-import Dashboard from "../pages/dashboard";
+import Dashboard from "../dashboard/dashboard";
 import Login from "../pages/login";
 import Home from "../pages/Home";
 import weather2 from "../components/weather_component";
 import PortadaArtist from "../components/Portada_Artist";
 import BuscarImg from "../components/buscarimg";
+import NoticiaComponent from "../components/noticia";
 
 export const routes = createBrowserRouter([
     {
@@ -34,7 +35,13 @@ export const routes = createBrowserRouter([
     },
     {
         path: "/dasboard",
-        element: <Dashboard />
+        element: <Dashboard />,
+        children:[
+            {
+            path:"dashboard/noticia",
+            element:<NoticiaComponent/>
+        }
+        ]
 
     },
     {
