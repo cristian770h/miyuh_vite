@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 
-export default function Noticia_component() {
+export default function Noticia_card() {
     const [Noticia, setNoticia] = useState([])
     useEffect(() => {
         fetchNoticia();

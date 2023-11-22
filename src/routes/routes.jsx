@@ -10,8 +10,8 @@ import PortadaArtist from "../components/Portada_Artist";
 import BuscarImg from "../components/buscarimg";
 
 import NavDash from "../dashboard/navdash";
-import Noticia_component from "../components/noticia_component";
-import Noticia_Page from "../pages/Noticiai_page";
+
+import Noticia_Page from "../pages/Noticia_Page";
 
 export const routes = createBrowserRouter([
     {
@@ -31,8 +31,8 @@ export const routes = createBrowserRouter([
                 element: <BuscarImg />
             },
             {
-                path: "noticias",
-                element: <Noticia_Page />
+                path: "/noticia",
+                element: <Noticia_Page/>
             },
         ],
     },
