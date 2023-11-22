@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-export default function NoticiaComponent() {
+export default function NoticiaDash() {
     const [Noticia, setNoticia] = useState([])
     useEffect(() => {
         fetchNoticia();
@@ -9,7 +9,7 @@ export default function NoticiaComponent() {
     }, [])
 
     const fetchNoticia = async () => {
-        const response = await axios.get('http://localhost:3000/Noticia')
+        const response = await axios.get('http://localhost:3000/Noticias')
         setNoticia(response.data)
         console.log(response.data)
         console.log('Datos de la api')

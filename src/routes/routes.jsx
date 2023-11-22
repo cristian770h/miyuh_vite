@@ -2,13 +2,16 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import Navbar from "../components/navbar";
-import Dashboard from "../dashboard/dashboard";
+import UserDash from "../dashboard/UsersDash";
 import Login from "../pages/login";
 import Home from "../pages/Home";
 import weather2 from "../components/weather_component";
 import PortadaArtist from "../components/Portada_Artist";
 import BuscarImg from "../components/buscarimg";
-import NoticiaComponent from "../components/noticia";
+
+import NavDash from "../dashboard/navdash";
+import Noticia_component from "../components/noticia_component";
+import Noticia_Page from "../pages/Noticiai_page";
 
 export const routes = createBrowserRouter([
     {
@@ -20,12 +23,16 @@ export const routes = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path:"/clima",
-                element:<PortadaArtist/>
+                path: "/clima",
+                element: <PortadaArtist />
             },
             {
-                path:"/mapa",
-                element:<BuscarImg/>
+                path: "/mapa",
+                element: <BuscarImg />
+            },
+            {
+                path: "noticias",
+                element: <Noticia_Page />
             },
         ],
     },
@@ -34,23 +41,20 @@ export const routes = createBrowserRouter([
         element: <Login />
     },
     {
-        path: "/dasboard",
-        element: <Dashboard />,
-        children:[
-            {
-            path:"dashboard/noticia",
-            element:<NoticiaComponent/>
-        }
+        path: "/dashboard",
+        element: <NavDash />,
+        children: [
+
         ]
 
     },
     {
-        path:"clima",
-        element:<PortadaArtist/>
+        path: "clima",
+        element: <PortadaArtist />
     },
     {
-        path:"clima2",
-        element:<weather2/>
+        path: "noticiacomponent",
+        element: <Noticia_component />
     },
 
 ])
