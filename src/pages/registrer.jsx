@@ -95,17 +95,17 @@ export default function Register() {
                                             Username
                                         </label>
                                         <div className="flex flex-row">
-                                        <input
-                                            className="appearance-none block w-full h-11 bg-gray-200 text-gray-700 border border-gray-200 rounded-s py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                            id="grid-username"
-                                            name="username"
-                                            type="text"
-                                            placeholder="Ingrese un Alias"
-                                            onChange={handleChange}
-                                            value={values.username}
-                                        /><div className="bg-gray-200 h-11 rounded-e px-4 py-1">
-                                            <box-icon name='user-circle' animation='fade-right' size='md' ></box-icon>
-                                        </div>
+                                            <input
+                                                className="appearance-none block w-full h-11 bg-gray-200 text-gray-700 border border-gray-200 rounded-s py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                                id="grid-username"
+                                                name="username"
+                                                type="text"
+                                                placeholder="Ingrese un Alias"
+                                                onChange={handleChange}
+                                                value={values.username}
+                                            /><div className="bg-gray-200 h-11 rounded-e px-4 py-1">
+                                                <box-icon name='user-circle' animation='fade-right' size='md' ></box-icon>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -115,17 +115,17 @@ export default function Register() {
                                             Contraseña
                                         </label>
                                         <div className="flex flex-row">
-                                        <input
-                                            className="appearance-none block w-full h-11 bg-gray-200 text-gray-700 border border-gray-200 rounded-s py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                            id="grid-password"
-                                            name="password"
-                                            type="password"
-                                            placeholder="******"
-                                            onChange={handleChange}
-                                            value={values.password}
-                                        /><div className="bg-gray-200 h-11 rounded-e px-3 py-1">
-                                            <box-icon name='check-shield' animation='burst' size='md' ></box-icon>
-                                        </div>
+                                            <input
+                                                className="appearance-none block w-full h-11 bg-gray-200 text-gray-700 border border-gray-200 rounded-s py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                                id="grid-password"
+                                                name="password"
+                                                type="password"
+                                                placeholder="******"
+                                                onChange={handleChange}
+                                                value={values.password}
+                                            /><div className="bg-gray-200 h-11 rounded-e px-3 py-1">
+                                                <box-icon name='check-shield' animation='burst' size='md' ></box-icon>
+                                            </div>
                                         </div>
                                         <p className="text-gray-600 text-xs italic px-28">La contraseña debe contener minimo 6 caracteres</p>
                                     </div>

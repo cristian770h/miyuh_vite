@@ -6,12 +6,12 @@ import UserDash from "../dashboard/UsersDash";
 import Login from "../pages/login";
 import Home from "../pages/Home";
 import weather2 from "../components/weather_component";
-import PortadaArtist from "../components/Portada_Artist";
 import BuscarImg from "../components/buscarimg";
-
 import NavDash from "../dashboard/navdash";
+import Noticias_Page from  "../pages/Noticia_Page";
 
-import Noticia_Page from "../pages/Noticia_Page";
+import Weather from "../components/Weather_comp";
+import Footer from "../components/footer";
 
 export const routes = createBrowserRouter([
     {
@@ -24,16 +24,17 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/clima",
-                element: <PortadaArtist />
+                element: <Weather/>
             },
             {
-                path: "/mapa",
+                path: "/calidad_aire",
                 element: <BuscarImg />
             },
             {
-                path: "/noticia",
-                element: <Noticia_Page/>
+                path: "/noticias",
+                element: <Noticias_Page/>
             },
+           
         ],
     },
     {
@@ -48,13 +49,5 @@ export const routes = createBrowserRouter([
         ]
 
     },
-    {
-        path: "clima",
-        element: <PortadaArtist />
-    },
-    {
-        path: "noticiacomponent",
-        element: <Noticia_component />
-    },
-
+<Footer/>
 ])

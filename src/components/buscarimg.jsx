@@ -101,7 +101,7 @@ export default function BuscarImg() {
                                     <p className="text-center text-3xl">{datos.data.aqi}</p>
                                     <p className="text-center font-bold">{AirQuality(datos.data.aqi)}</p>
                                 </div>
-                                <div className="px-6 pt-4 pb-2">
+                                <div className="px-6 pt-4 pb-">
                                     <div className="flex justify-between items-center">
                                         <span>{datos.data.dominent}</span>
                                         <div className="w-full  rounded-full h-2 mx-2">

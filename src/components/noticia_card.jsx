@@ -22,7 +22,7 @@ export default function Noticia_card() {
 
     return (
         <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <div className="flex flex-grow-0 gap-4">
                 <div className="bg-white-500 border-solid border-gray-200 border-4 rounded-md w-[25rem] ml-[5rem] mr-[6rem] mt-[12rem] shadow-xl drop-shadow-lg text-black ">
                     {Noticia.map((noticia, index) => (
                         <div className='flex flex-col row-span-2 mb-12' key={noticia.id}>
