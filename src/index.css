@@ -87,8 +87,9 @@ button:focus-visible {
 }
 
 
-.timelezz{
-  background-image: url('..\src\assets\img\timelezz.jpg');
+
+.clima_imagen{
+  background-image: url('..\src\assets\img\clima2.png');
     background-size: cover;
     background-position: center;
 }

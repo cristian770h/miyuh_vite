@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
+import Weather from "./Weather_comp";
 
 export default function Navbar() {
 
@@ -25,7 +26,6 @@ export default function Navbar() {
 
     const handleSearchSubmit = (e) => {
         e.preventDefault();
-        // Aquí podrías llamar a fetchData, pero como ciudadBusqueda es una dependencia de useEffect, se actualizará automáticamente.
     };
 
 
@@ -99,6 +99,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 <Outlet />
+                
             </div>
         </>
     );

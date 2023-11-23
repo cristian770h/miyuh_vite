@@ -1,23 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function Weather({ ciudadBusqueda}) {
-    const [clima, setDatos] = useState(null);
+export default function Weather({ clima,ciudad}) {
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=b09b3aeceb74476391e133322231411&q=mexico&aqi=yes`);
-                console.log('Respuesta de la API:', response.data);
-                setDatos(response.data); // Ajustado para tomar la respuesta directa
-            } catch (error) {
-                console.error('Error al obtener datos:', error);
-            }
-        };
-
-        fetchData();
-    }, []);
-
+    
+    
+   
     const [isContentVisible, setIsContentVisible] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false); // Nuevo estado para controlar la expansión del fondo
 
