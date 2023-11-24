@@ -32,7 +32,7 @@ export default function Navbar() {
     return (
         <>
             <div className="navbar-container flex-col min-h-0 static">
-                <div className='bg-blue-400 text-black fixed top-0 left-0 w-full flex flex-row justify-between px-[15rem]  items-center '>
+                <div className='bg-blue-400 text-black fixed top-0 left-0 w-full flex flex-row justify-between px-[15rem]  items-center z-10'>
                     <div className="" >
                         <ul className="flex flex-row ">
                             <li>
@@ -78,7 +78,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 {clima && (
-                    <div className="bg-blue-300 text-black fixed top-0 left-0 w-full flex flex-row justify-between px-20 py-1 items-center  mt-[4rem]">
+                    <div className="bg-blue-300 text-black fixed top-0 left-0 w-full flex flex-row justify-between px-20 py-1 items-center  mt-[4rem] z-20">
                         <div>
                             <ul className="flex flex-row justify-between z-10 text-white">
                                 <li className="px-1"><img src={clima.current.condition.icon} alt="" className="w-7 h-7" /></li>

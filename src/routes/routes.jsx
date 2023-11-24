@@ -8,10 +8,12 @@ import Home from "../pages/Home";
 import weather2 from "../components/weather_component";
 import BuscarImg from "../components/buscarimg";
 import NavDash from "../dashboard/navdash";
-import Noticias_Page from  "../pages/Noticia_Page";
-
+import Noticias_Page from "../pages/Noticia_Page";
 import Weather from "../components/Weather_comp";
 import Footer from "../components/footer";
+import Noticia_id from "../components/noticia_id";
+import UpdUser from "../components/UpdUser";
+import IndexDash from "../pages/table";
 
 export const routes = createBrowserRouter([
     {
@@ -24,7 +26,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/clima",
-                element: <Weather/>
+                element: <Weather />
             },
             {
                 path: "/calidad_aire",
@@ -32,22 +34,24 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/noticias",
-                element: <Noticias_Page/>
+                element: <Noticias_Page />
             },
-           
+            {
+                path: "/noticias/:id_Noticia",
+                element: <Noticia_id />
+            },
+
         ],
-    },
-    {
-        path: "/login",
-        element: <Login />
     },
     {
         path: "/dashboard",
         element: <NavDash />,
-        children: [
+    },
 
-        ]
+    {
+        path: "/update/:id_user",
+        element: <UpdUser />,
 
     },
-<Footer/>
+    <Footer />
 ])

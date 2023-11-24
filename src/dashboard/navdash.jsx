@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-
+import AddUser from '../components/agregarusuario';
+import Table from "../pages/table";
 const NavDash = () => {
   return (
     <>
-
-      <div className="flex w-screen h-screen text-gray-700">
+      <div className="flex w-[5rem] h-screen text-gray-70">
         <div className="flex flex-col items-center w-16 pb-4 overflow-auto border-r border-gray-300">
           <a
             className="flex items-center justify-center flex-shrink-0 w-full h-16 bg-gray-300"
@@ -138,6 +138,18 @@ const NavDash = () => {
               />
             </svg>
           </a>
+        </div>
+      </div>
+      <div className='ml-12'>
+        <div className="flex-grow p-6 overflow-auto bg-gray-200">
+          <div className=" gap-6 ">
+            <div>
+              <AddUser />
+            </div>
+            <div className="">
+              <Table />
+            </div>
+          </div>
         </div>
       </div>
       <Outlet />

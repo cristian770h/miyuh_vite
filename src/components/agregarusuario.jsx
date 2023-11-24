@@ -43,7 +43,7 @@ function AddUser() {
                     var res = await axios.post('http://localhost:3000/users', values)
                     actions.resetForm()
                     alert('Datos agregados correctamente')
-                    window.location = '/dasboard';
+                    window.location = '/dashboard';
 
                 }}
             >

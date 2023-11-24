@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -20,15 +20,15 @@ export default function IndexDash() {
 
   const HandeUpdate = async () => {
     try {
-      await axios.put(`http://localhost:3000/users/${id}`, userData);
+      await axios.put(`http://localhost:3000/users/${id_user}`, userData);
       alert("Usuario actualizado");
     } catch (error) {
       console.error("Error usuario no encontrado", error);
     }
   };
 
-  const HandeDelte = async (id) => {
-    const response = await axios.delete(`http://localhost:3000/users/${id}`);
+  const HandeDelte = async (id_user) => {
+    const response = await axios.delete(`http://localhost:3000/users/${id_user}`);
     if (response.status == 200) {
       alert("Se borro corectamente")
     } else {
@@ -36,7 +36,10 @@ export default function IndexDash() {
     }
     fetchUsers()
   }
-  const navigate = useNavigate()
+  
+  const navigate = useNavigate();
+
+
   return (
 
     <div class="p-4 sm:ml-50">
@@ -71,7 +74,7 @@ export default function IndexDash() {
                 <tbody>
                   {Users.map((users) => (<tr className="border-b dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                      {users.id}
+                      {users.id_user}
                     </th>
                     <td className="px-6 py-4">
                       {users.Nombre}
@@ -83,10 +86,10 @@ export default function IndexDash() {
                       {users.Password}
                     </td>
                     <td className="px-6 py-4">
-                      <button onClick={() => navigate(`/update/${users.id}`)} className=" btn btn-warning mr-auto"> Editar</button>
+                      <button onClick={() => navigate(`/update/${users.id_user}`)} className=" btn btn-warning mr-auto"> Editar</button>
                     </td>
                     <td className="px-6 py-4">
-                      <button onClick={() => HandeDelte(users.id)} className="font-medium text-blue-600  hover:underline">Eliminar</button>
+                      <button onClick={() => HandeDelte(users.id_user)} className="font-medium text-blue-600  hover:underline">Eliminar</button>
                     </td>
                   </tr>
                   ))}
