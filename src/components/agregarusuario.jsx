@@ -25,7 +25,7 @@ import { Formik } from 'formik';
 
 
 
-function AddUser() {
+function AddUser({onClose}) {
     return (
         <>
             <Formik
@@ -78,7 +78,10 @@ function AddUser() {
 
                 )}
             </Formik>
-
+            <button
+                            onClick={onClose}
+                            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                        >Cerrar Formulario</button>
         </>
     )
 }

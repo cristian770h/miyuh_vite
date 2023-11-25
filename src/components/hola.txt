@@ -1,0 +1,6 @@
+<div key={index} className="hourly-forecast">
+                    <p>Hora: {hora.time.split(' ')[1]}</p>
+                    <p>Temperatura: {hora.temp_c}°C</p>
+                    <p>Condición: {hora.condition.text}</p>
+                    {/* Otros datos que desees mostrar por cada hora */}
+                </div>

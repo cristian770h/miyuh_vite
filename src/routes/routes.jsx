@@ -1,20 +1,17 @@
-
-
 import { createBrowserRouter } from "react-router-dom";
 import Navbar from "../components/navbar";
-import UserDash from "../dashboard/UsersDash";
-import Login from "../pages/login";
 import Home from "../pages/Home";
-import weather2 from "../components/weather_component";
 import BuscarImg from "../components/buscarimg";
-import NavDash from "../dashboard/navdash";
 import Noticias_Page from "../pages/Noticia_Page";
 import Weather from "../components/Weather_comp";
 import Footer from "../components/footer";
 import Noticia_id from "../components/noticia_id";
 import UpdUser from "../components/UpdUser";
-import IndexDash from "../pages/table";
-
+import Page_Users from "../dashboard/das-pages/table_users";
+import Page_Noticia from "../dashboard/das-pages/table_noticia_page";
+import UpdNoticia from "../dashboard/UpdNoticia";
+import FiveDaysPage from "../pages/5daysClima";
+import ForecastCincoDias from "../components/forecast_5";
 export const routes = createBrowserRouter([
     {
         path: "/",
@@ -33,6 +30,10 @@ export const routes = createBrowserRouter([
                 element: <BuscarImg />
             },
             {
+                path: "/cinco_dias/:ciudadBusqueda",
+                element: <ForecastCincoDias />
+            },
+            {
                 path: "/noticias",
                 element: <Noticias_Page />
             },
@@ -44,13 +45,26 @@ export const routes = createBrowserRouter([
         ],
     },
     {
-        path: "/dashboard",
-        element: <NavDash />,
+        path: "/dashboard_users",
+        element: <Page_Users />,
     },
-
+    {
+        path: "/dias",
+        element: <ForecastCincoDias />,
+    },
+    {
+        path: "/dashboard_noticias",
+        element: <Page_Noticia />,
+    },
     {
         path: "/update/:id_user",
         element: <UpdUser />,
+
+    },
+
+    {
+        path: "/update_noticia/:id_Noticia",
+        element: <UpdNoticia />,
 
     },
     <Footer />

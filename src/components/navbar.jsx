@@ -2,7 +2,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Weather from "./Weather_comp";
-
+import ForecastCincoDias from "./forecast_5";
+import FiveDaysPage from "../pages/5daysClima";
+import { useNavigate } from "react-router-dom";
 export default function Navbar() {
 
     const [clima, setDatos] = useState(null);
@@ -28,7 +30,7 @@ export default function Navbar() {
         e.preventDefault();
     };
 
-
+    const navigate = useNavigate();
     return (
         <>
             <div className="navbar-container flex-col min-h-0 static">
@@ -51,7 +53,7 @@ export default function Navbar() {
                         </ul>
                     </div>
                     <div className="pr-52">
-                        <form onSubmit={handleSearchSubmit} className="flex flex-row items-center"> {/* Flexbox aplicado al formulario */}
+                        <form onSubmit={handleSearchSubmit} className="flex flex-row items-center">
                             <div className="flex flex-row items-center justify-center border-2 p-2 rounded-2xl gap-2">
                                 <div className="flex items-center justify-center">
                                     <box-icon name="search" color="white"></box-icon>
@@ -87,19 +89,29 @@ export default function Navbar() {
                             </ul>
                         </div>
                     </div>)}
-                <div className="bg-blue-500 text-black fixed top-0 left-0 w-full flex  justify-between px-20 py-1 items-center z-10 mt-[6.2rem] ">
+                <div className="bg-blue-500 text-black fixed top-0 left-0 w-full flex justify-between px-20 py-1 items-center z-10 mt-[6.2rem]">
                     <div className="">
-                        <ul className="flex flex-row text-white font-kanit text-1xs  justify-between px-[16rem] z-10 object-center">
-                            <Link className="text-white hover:text-black" to={"/"}><li className="px-3 hover:underline">Inicio</li></Link>
-                            <Link className="text-white hover:text-black" to={"/calidad_aire"}><li className="px-7 hover:underline">Mapa de calidad del aire </li></Link>
-                            <Link className="text-white hover:text-black" to={"/calidad_aire"}><li className="px-7 hover:underline">Pronostico de 5 dias </li></Link>
-                            <Link className="text-white hover:text-black" to={"/calidad_aire"}><li className="px-7 hover:underline">Pronostico de 14 dias </li></Link>
-                            <Link className="text-white hover:text-black" to={"noticias"}><li className="px-7 hover:underline">Noticias</li></Link>
+                        <ul className="flex flex-row text-white font-kanit text-1xs justify-between px-[16rem] z-10 object-center">
+                            <Link className="text-white hover:text-black">
+                                <li className="px-3 hover:underline py-2">Inicio</li>
+                            </Link>
+                            <Link className="text-white hover:text-black" to={"/calidad_aire"}>
+                                <li className="px-7 hover:underline text-[15px] py-2">Mapa de calidad del aire</li>
+                            </Link>
+                            <li className="px-7 hover:underline">
+                                <button onClick={() => navigate(`/cinco_dias/${ciudadBusqueda}`)} className="bg-transparent  text-[15px]">Pronóstico 5 días</button>
+                            </li>
+                            <li className="px-7 hover:underline">
+                                <button onClick={() => navigate(`/update_noticia/${users.id_Noticia}`)} className="bg-transparent w-[px] h-[.5px] text-[15px]">Pronóstico 14 días</button>
+                            </li>
+                            <Link className="text-white hover:text-black" to={"noticias"}>
+                                <li className="px-7 hover:underline py-2">Noticias</li>
+                            </Link>
                         </ul>
                     </div>
                 </div>
                 <Outlet />
-                
+
             </div>
         </>
     );

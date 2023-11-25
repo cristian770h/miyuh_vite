@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-
+import { useNavigate } from "react-router-dom"
 export default function NoticiaDash() {
     const [Noticia, setNoticia] = useState([])
     useEffect(() => {
@@ -8,14 +8,33 @@ export default function NoticiaDash() {
 
     }, [])
 
+    const HandeUpdate = async () => {
+        try {
+            await axios.put(`http://localhost:3000/Noticias/${id_Noticia}`, userData);
+            alert("Usuario actualizado");
+        } catch (error) {
+            console.error("Error usuario no encontrado", error);
+        }
+    };
+
     const fetchNoticia = async () => {
         const response = await axios.get('http://localhost:3000/Noticias')
         setNoticia(response.data)
         console.log(response.data)
         console.log('Datos de la api')
         console.log(response)
+    }
 
+    const navigate = useNavigate();
 
+    const HandeDelte = async (id_Noticia) => {
+        const response = await axios.delete(`http://localhost:3000/Noticias/${id_Noticia}`);
+        if (response.status == 200) {
+            alert("Se borro corectamente")
+        } else {
+            alert("Succedio correctamente")
+        }
+        fetchUsers()
     }
 
     return (
@@ -33,13 +52,13 @@ export default function NoticiaDash() {
                                                 id
                                             </th>
                                             <th scope="col" className="px-6 py-3">
-                                                Nombre
+                                                Titulo
                                             </th>
                                             <th scope="col" className="px-6 py-3">
-                                                Category
+                                                Url_img
                                             </th>
                                             <th scope="col" className="px-6 py-3">
-                                                Price
+                                                Noticia
                                             </th>
                                             <th scope="col" className="px-6 py-3">
                                                 Action
@@ -50,24 +69,24 @@ export default function NoticiaDash() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {Users.map((users) => (<tr className="border-b dark:border-gray-700">
+                                        {Noticia.map((users) => (<tr className="border-b dark:border-gray-700">
                                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                                {users.id}
+                                                {users.id_Noticia}
                                             </th>
                                             <td className="px-6 py-4">
-                                                {users.Nombre}
+                                                {users.Titulo}
                                             </td>
                                             <td className="px-6 py-4">
-                                                {users.UserName}
+                                                {users.Img_noticia}
                                             </td>
                                             <td className="px-6 py-4">
-                                                {users.Password}
+                                                {users.Noticia}
                                             </td>
                                             <td className="px-6 py-4">
-                                                <button onClick={() => navigate(`/update/${users.id}`)} className=" btn btn-warning mr-auto"> Editar</button>
+                                                <button onClick={() => navigate(`/update_noticia/${users.id_Noticia}`)} className=" btn btn-warning mr-auto"> Editar</button>
                                             </td>
                                             <td className="px-6 py-4">
-                                                <button onClick={() => HandeDelte(users.id)} className="font-medium text-blue-600  hover:underline">Eliminar</button>
+                                                <button onClick={() => HandeDelte(users.id_Noticia)} className="font-medium text-blue-600  hover:underline">Eliminar</button>
                                             </td>
                                         </tr>
                                         ))}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import AddUser from '../components/agregarusuario';
-import Table from "../pages/table";
+
 const NavDash = () => {
   return (
     <>
@@ -27,9 +26,7 @@ const NavDash = () => {
             </svg>
           </a>
           <Link className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-300"
-            to={"/noticia_dash"}>
-
-
+            to={"/dashboard_users"}>
             <svg
               className="w-5 h-5"
               xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +42,7 @@ const NavDash = () => {
               />
             </svg>
           </Link>
-          <Link className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-300" to={"/noticia"}>
+          <Link className="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-gray-300" to={"/dashboard_noticias"}>
 
             <svg
               className="w-5 h-5"
@@ -140,18 +137,7 @@ const NavDash = () => {
           </a>
         </div>
       </div>
-      <div className='ml-12'>
-        <div className="flex-grow p-6 overflow-auto bg-gray-200">
-          <div className=" gap-6 ">
-            <div>
-              <AddUser />
-            </div>
-            <div className="">
-              <Table />
-            </div>
-          </div>
-        </div>
-      </div>
+      
       <Outlet />
     </>
   );

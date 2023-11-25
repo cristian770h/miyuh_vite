@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function IndexDash() {
   const [Users, setUsers] = useState([]);
+
+  
   useEffect(() => {
     fetchUsers();
   }, []);
