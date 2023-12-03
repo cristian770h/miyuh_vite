@@ -25,7 +25,7 @@ export default function ForecastCincoDias() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=b09b3aeceb74476391e133322231411&q=${ciudadBusqueda}&aqi=yes&forecast_day=5&dt=2023-11-29`);
+                const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=b09b3aeceb74476391e133322231411&q=${ciudadBusqueda}&aqi=yes&forecast_day=14&dt=2023-13-12`);
                 setDatos(response.data);
             } catch (error) {
                 console.error('Error al obtener datos:', error);

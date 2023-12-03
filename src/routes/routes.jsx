@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter,Outlet } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Home from "../pages/Home";
 import BuscarImg from "../components/buscarimg";
@@ -12,10 +12,18 @@ import Page_Noticia from "../dashboard/das-pages/table_noticia_page";
 import UpdNoticia from "../dashboard/UpdNoticia";
 import FiveDaysPage from "../pages/5daysClima";
 import ForecastCincoDias from "../components/forecast_5";
+import LoginForm from "../components/login";
+import ForecastCatorcecoDias from "../components/forecast_14";
+import AcercaDe from "../pages/Acercade";
+import RegisterForm from "../components/Registro";
 export const routes = createBrowserRouter([
     {
         path: "/",
-        element: <Navbar />,
+        element:  (<>
+        <Navbar />
+        
+        <Footer  />
+    </>),
         children: [
             {
                 path: "/",
@@ -34,6 +42,10 @@ export const routes = createBrowserRouter([
                 element: <ForecastCincoDias />
             },
             {
+                path: "/catorce_dias/:ciudadBusqueda",
+                element: <ForecastCatorcecoDias />
+            },
+            {
                 path: "/noticias",
                 element: <Noticias_Page />
             },
@@ -41,8 +53,24 @@ export const routes = createBrowserRouter([
                 path: "/noticias/:id_Noticia",
                 element: <Noticia_id />
             },
+            {
+                path: "/login",
+                element: <LoginForm />
 
+            },
+            {
+                path: "/Registro",
+                element: <RegisterForm />
+
+            },
+            {
+                path: "/acerca",
+                element: <AcercaDe />
+                
+            },
+<Footer/>
         ],
+        
     },
     {
         path: "/dashboard_users",

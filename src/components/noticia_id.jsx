@@ -23,19 +23,20 @@ export default function NoticiaDetalle() {
     };
 
     return (
-        <div>
-            <main className="relative">
-                <div className="absolute inset-0 bg-cover bg-center blur-xl" style={{ backgroundImage: `url(${Noticia.Img_noticia})`, width: '93rem', height: '60rem' }}></div>
-                <div className="absolute inset-0 flex flex-col justify-center items-center object-center text-white">
-                    <div className="text-center">
-                        <img src={Noticia.Img_noticia} className="w-[31rem] h-[22rem] mb-4" alt="" />
-                        <span className="text-black font-bold text-2xl">{Noticia.Titulo}</span>
-                    </div>
-                    <div className="text-2xl text-black">
-                        {Noticia.Noticia}
-                    </div>
-                </div>
-            </main>
+
+        <main className="relative w-screen h-40rem mt-[22rem]">
+        <div
+          className="absolute inset-0 bg-cover bg-center blur-xl"
+          style={{ backgroundImage: `url(${Noticia.Img_noticia})` }}
+        ></div>
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+          <div className="text-center">
+            <img src={Noticia.Img_noticia} className="w-31rem h-22rem mb-4" alt="" />
+            <span className="text-black font-bold text-2xl">{Noticia.Titulo}</span>
+          </div>
+          <div className="text-2xl text-black">{Noticia.Noticia}</div>
         </div>
+      </main>
+      
     );
 }

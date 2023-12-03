@@ -74,9 +74,10 @@ export default function Navbar() {
                     </div>
 
                     <div className="flex flex-row">
+                        <Link to='login'>
                         <div className=" flex flex-row items-center px-5 gap-4">
                             <box-icon name='user-circle' type='solid' color='white' size='lg'></box-icon>
-                        </div>
+                        </div></Link>
                     </div>
                 </div>
                 {clima && (
@@ -102,7 +103,7 @@ export default function Navbar() {
                                 <button onClick={() => navigate(`/cinco_dias/${ciudadBusqueda}`)} className="bg-transparent  text-[15px]">Pronóstico 5 días</button>
                             </li>
                             <li className="px-7 hover:underline">
-                                <button onClick={() => navigate(`/update_noticia/${users.id_Noticia}`)} className="bg-transparent w-[px] h-[.5px] text-[15px]">Pronóstico 14 días</button>
+                                <button onClick={() => navigate(`/catorce_dias/${ciudadBusqueda}`)} className="bg-transparent w-[px] h-[.5px] text-[15px]">Pronóstico 14 días</button>
                             </li>
                             <Link className="text-white hover:text-black" to={"noticias"}>
                                 <li className="px-7 hover:underline py-2">Noticias</li>
